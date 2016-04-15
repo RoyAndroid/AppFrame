@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">AppFrame</string>
+
+    <string name="ok">确定</string>
+    <string name="cancel">取消</string>
+
+    <string name="header_hint_refresh_normal">下拉刷新</string>
+    <string name="header_hint_refresh_ready">松开可以刷新</string>
+    <string name="header_hint_refresh_loading">正在刷新</string>
+    <string name="header_hint_refresh_time">上次刷新时间:</string>
+    <string name="footer_load_more_hint_normal">上拉加载更多</string>
+    <string name="footer_load_more_hint_ready">松开载入更多</string>
+    <string name="footer_load_more_hint_all">没有更多动态了</string>
+    <string name="footer_load_more_hint_loading_next">正在加载下一页</string>
+    <string name="loading_data_for_share">正在加载数据,请稍候分享...</string>
+    <string name="loading">加载中</string>
+    <string name="refresh_please">刷新一下呗</string>
 </resources>

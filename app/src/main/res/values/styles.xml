@@ -1,11 +1,124 @@
 <resources>
 
-    <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="BaseTheme" parent="Theme.AppCompat.Light.NoActionBar"></style>
+
+    <style name="AppTheme" parent="BaseTheme">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColorPrimaryInverse">@android:color/white</item>
+        <item name="android:windowBackground">@color/white</item>
     </style>
+
+    <style name="TransparentTheme" parent="BaseTheme">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <!-- Dialog-->
+    <style name="dialog_parent_style" parent="@android:style/Theme.Dialog">
+        <!-- 边框 -->
+        <item name="android:windowFrame">@null</item>
+        <!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 半透明 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- 无标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 背景透明 -->
+        <item name="android:background">@android:color/transparent</item>
+        <!-- 模糊 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+        <!-- 点击屏幕dialog消失 -->
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <style name="dialog_full">
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/transparent_70</item>
+    </style>
+
+    <style name="TransparentDialog" parent="dialog_parent_style"></style>
+
+    <style name="SimpleHUD" parent="@android:style/Theme.Holo.Dialog">
+        <!-- 边框 -->
+        <item name="android:windowFrame">@null</item>
+        <!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsFloating">true</item>
+
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+        <!-- 背景 -->
+        <item name="android:windowBackground">@drawable/simplehud_bg</item>
+        <!-- 无标题 -->
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="dialogButtom" parent="dialog_parent_style">
+        <!-- 动画 -->
+        <item name="android:windowAnimationStyle">@style/pop_bottom_in_out_anim_style</item>
+    </style>
+
+    <!-- ProgressBar -->
+    <style name="BaseProgressBar" parent="android:Widget.ProgressBar.Horizontal">
+        <item name="android:progress">0</item>
+        <item name="android:max">100</item>
+    </style>
+
+    <!-- listView -->
+    <style name="listview_parent_style" parent="android:Widget.ListView">
+        <item name="android:cacheColorHint">@android:color/transparent</item>
+        <item name="android:listSelector">@drawable/selector_listitem_click</item>
+        <item name="android:overScrollMode">never</item>
+        <item name="android:fillViewport">false</item>
+        <item name="android:scrollbars">none</item>
+        <item name="android:fadingEdge">none</item>
+        <item name="android:headerDividersEnabled">false</item>
+        <item name="android:footerDividersEnabled">false</item>
+    </style>
+
+    <style name="listview_normal_style" parent="listview_parent_style">
+        <item name="android:divider">@color/common_line_color</item>
+        <item name="android:dividerHeight">1px</item>
+    </style>
+
+    <style name="listview_no_divider_style" parent="listview_parent_style">
+        <item name="android:divider">@null</item>
+        <item name="android:dividerHeight">0dp</item>
+    </style>
+
+    <style name="listview_transparent_style" parent="listview_parent_style">
+        <item name="android:listSelector">@drawable/selector_listview_transparent_click</item>
+        <item name="android:divider">@color/white_transparent_50</item>
+        <item name="android:dividerHeight">1px</item>
+    </style>
+
+    <!-- RecyclerView -->
+    <style name="recyclerview_parent_style">
+        <item name="android:fadingEdge">none</item>
+        <item name="android:overScrollMode">never</item>
+        <item name="android:fillViewport">false</item>
+        <item name="android:scrollbars">none</item>
+    </style>
+
+    <!-- CheckBox -->
+
+    <!-- Animation -->
+    <style name="popWindow_animation">
+        <item name="android:windowEnterAnimation">@anim/anim_popupwindow_enter</item>
+        <item name="android:windowExitAnimation">@anim/anim_popupwindow_exit</item>
+    </style>
+
+    <style name="pop_bottom_in_out_anim_style">
+        <item name="android:windowEnterAnimation">@anim/anim_pop_bottom_in</item>
+        <item name="android:windowExitAnimation">@anim/anim_pop_bottom_out</item>
+    </style>
+
+    <!-- Specialized -->
 
 </resources>

@@ -1,6 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <!-- 最新颜色规范 -->
+    <color name="orange_dark">#ff6d1e</color>
+    <color name="orange">#ff902e</color>
+    <color name="pink">#fc686b</color>
+    <color name="green">#6cc651</color>
+    <color name="blue">#59b8eb</color>
+    <color name="blue_dark">#3fa6e9</color>
+    <color name="yellow">#FFA500</color>
+    <color name="red">#e34c3e</color>
+    <color name="red_dark">#FFC93437</color>
+    <color name="red_fresh">#f43531</color>
+    <color name="unable_color">#999999</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="grey">#EAEAEA</color>
+    <color name="grey_dark">#222222</color>
+
+    <color name="text_black">#222222</color>
+    <color name="text_middle_black">#666666</color>
+    <color name="text_light_black">#999999</color>
+    <color name="text_dark_grey">#666666</color>
+    <color name="text_light_gray">#b3b3b3</color>
+    <color name="text_grey">#888888</color>
+    <color name="hint_color">#cccccc</color>
+
+    <!-- 通用分割线的颜色 线条 -->
+    <color name="common_line_color">#e3e3e3</color>
+    <color name="line_color">#DDDDDD</color>
+
+    <!-- 通用背景色 -->
+    <color name="common_bg">#f2f2f2</color>
+
+    <color name="title_bg">#3E454F</color>
+
+    <!--黑色透明-->
+    <color name="transparent">#00000000</color>
+    <color name="transparent_10">#30000000</color>
+    <color name="transparent_20">#20000000</color>
+    <color name="black_line">#292421</color>
+    <color name="weibo_chose">#767676</color>
+    <color name="weibo_chose_p">#3b3b3b</color>
+    <color name="transparent_30">#77000000</color>
+    <color name="transparent_35">#90000000</color>
+    <color name="transparent_70">#b2000000</color>
+
+    <!--白色透明-->
+    <color name="white_transparnet">#99ffffff</color>
+    <color name="white_transparent_70">#70ffffff</color>
+    <color name="white_transparent_50">#50ffffff</color>
+    <color name="white_transparent_30">#30ffffff</color>
+
+    <!--间隔线条背景-->
+    <color name="view_background">#e5e5e5</color>
 </resources>
