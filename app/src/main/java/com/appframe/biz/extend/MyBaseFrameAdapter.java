@@ -50,6 +50,9 @@ abstract  public class MyBaseFrameAdapter<E> extends BaseAdapter {
     /* 清空ListView的Items数据 */
     public abstract void clearItems();
 
+    /* 获取最后一条数据 */
+    public abstract E getLastItem();
+
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         return null;

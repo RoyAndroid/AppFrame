@@ -101,7 +101,7 @@ public class MyBaseAdapter<E> extends MyBaseFrameAdapter<E> {
 
     @Override
     public E getItem(int position) {
-        if (position >= mItems.size())
+        if (position >= mItems.size() || position < 0)
             return null;
         return mItems != null ? mItems.get(position) : null;
     }
@@ -117,6 +117,14 @@ public class MyBaseAdapter<E> extends MyBaseFrameAdapter<E> {
             mItems.clear();
             notifyDataSetChanged();
         }
+    }
+
+    @Override
+    public E getLastItem() {
+        if (mItems == null || mItems.isEmpty())
+            return null;
+        else
+            return mItems.get(getCount() - 1);
     }
 
     public boolean isEmpty() {
