@@ -5,7 +5,7 @@ import android.app.Activity;
 import com.appframe.MyApplication;
 import com.appframe.biz.extend.BaseActivity;
 import com.appframe.biz.manager.AppManager;
-import com.appframe.lib.SimpleHUD.ToastHelper;
+import com.appframe.lib.ToastUtil.ToastHelper;
 import com.nostra13.universalimageloader.core.ImageLoader;
 
 import java.util.Timer;

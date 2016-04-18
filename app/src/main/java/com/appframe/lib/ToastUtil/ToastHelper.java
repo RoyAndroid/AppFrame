@@ -1,4 +1,4 @@
-package com.appframe.lib.SimpleHUD;
+package com.appframe.lib.ToastUtil;
 
 import android.app.Activity;
 import android.content.Context;
@@ -10,7 +10,7 @@ import com.appframe.R;
 
 public class ToastHelper {
 
-    private static SimpleHUDDialog dialog;
+    private static ToastDialog dialog;
     private static Context context;
 
     public static void show(Context context) {
@@ -66,7 +66,7 @@ public class ToastHelper {
         if (!isContextValid())
             return;
 
-        dialog = SimpleHUDDialog.createDialog(ctx);
+        dialog = ToastDialog.createDialog(ctx);
         dialog.setMessage(msg);
         dialog.showProgressBar(showProgressBar);
         dialog.setImage(resId);

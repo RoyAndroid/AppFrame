@@ -1,4 +1,4 @@
-package com.appframe.lib.SimpleHUD;
+package com.appframe.lib.ToastUtil;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -11,7 +11,7 @@ import android.widget.TextView;
 import com.appframe.R;
 
 
-class SimpleHUDDialog extends Dialog {
+class ToastDialog extends Dialog {
 
     private String message;
     private ImageView imageView;
@@ -19,12 +19,12 @@ class SimpleHUDDialog extends Dialog {
     private TextView messageView;
     private boolean showProgressBar;
 
-	public SimpleHUDDialog(Context context, int theme) {
+	public ToastDialog(Context context, int theme) {
 		super(context, theme);
 	}
 	
-	public static SimpleHUDDialog createDialog(Context context) {
-		SimpleHUDDialog dialog = new SimpleHUDDialog(context, R.style.SimpleHUD);
+	public static ToastDialog createDialog(Context context) {
+		ToastDialog dialog = new ToastDialog(context, R.style.SimpleHUD);
 		dialog.setContentView(R.layout.simplehud);
 		dialog.getWindow().getAttributes().gravity = Gravity.CENTER;
 		return dialog;

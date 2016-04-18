@@ -18,7 +18,7 @@ import android.view.inputmethod.InputMethodManager;
 
 import com.appframe.MyApplication;
 import com.appframe.lib.Log.L;
-import com.appframe.lib.SimpleHUD.ToastHelper;
+import com.appframe.lib.ToastUtil.ToastHelper;
 
 import java.io.File;
 import java.util.List;
