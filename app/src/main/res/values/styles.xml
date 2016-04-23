@@ -70,6 +70,28 @@
         <item name="android:max">100</item>
     </style>
 
+    <!-- TextView -->
+    <style name="BaseTextViewStyle" parent="android:TextAppearance.Widget.TextView">
+        <item name="android:background">@null</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:focusable">false</item>
+    </style>
+
+    <!-- EditText -->
+    <style name="BaseEditTextStyle" parent="android:TextAppearance.Widget.EditText">
+        <item name="android:background">@null</item>
+        <item name="android:textColorHint">@color/hint_color</item>
+    </style>
+
+    <!-- ImageView -->
+    <style name="BaseImageViewStyle">
+        <item name="android:background">@null</item>
+        <item name="android:scaleType">centerCrop</item>
+        <item name="android:adjustViewBounds">true</item>
+        <item name="android:contentDescription">@string/app_name</item>
+    </style>
+
     <!-- listView -->
     <style name="listview_parent_style" parent="android:Widget.ListView">
         <item name="android:cacheColorHint">@android:color/transparent</item>
