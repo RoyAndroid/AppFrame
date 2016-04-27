@@ -143,4 +143,17 @@
 
     <!-- Specialized -->
 
+    <!-- toolbar view style -->
+    <style name="toolbar_btn_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:scaleType">centerInside</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:background">@color/transparent</item>
+        <item name="android:drawablePadding">@dimen/dp_5</item>
+        <item name="android:padding">@dimen/dp_12</item>
+        <item name="android:textColor">@color/text_black</item>
+        <item name="android:textSize">@dimen/font_14</item>
+        <item name="android:visibility">gone</item>
+    </style>
 </resources>

@@ -11,7 +11,7 @@ public class PreventContinuousClickUtil {
 
     public static boolean isContinuousClick() {
         long time = System.currentTimeMillis();
-        if (time - lastClickTime < Constants.HALF_SECOND) {
+        if (time - lastClickTime < Constants.HALF_SECOND && time - lastClickTime > 0) {
             return true;
         }
         lastClickTime = time;

@@ -18,7 +18,8 @@ public abstract class CustomToolBarActivity extends BaseActivity implements View
     @Override
     public void setContentView(int layoutResId) {
         mToolbarHelper = new ToolbarHelper(this, layoutResId);
-        mToolbar = mToolbarHelper.getToolbar();
+        mToolbarHelper.createBasebar();
+        mToolbar = (Toolbar) mToolbarHelper.getToolbar();
         mToolbar.setOnClickListener(this);
         setContentView(mToolbarHelper.getContentVew());
         setSupportActionBar(mToolbar);
@@ -34,6 +35,16 @@ public abstract class CustomToolBarActivity extends BaseActivity implements View
 
     public ToolbarHelper getToolbarHelper() {
         return mToolbarHelper;
+    }
+
+    /**
+     * 仅仅设置标题
+     *
+     * @param titleId
+     */
+    public void setOnlyTitle(int titleId) {
+        if (mToolbar != null)
+            mToolbar.setTitle(getString(titleId));
     }
 
     /**
@@ -101,10 +112,15 @@ public abstract class CustomToolBarActivity extends BaseActivity implements View
         }
     }
 
-    public void setLeftButton(String text){
+    public void setLeftButton(String text) {
         if (mToolbar != null) {
             mToolbar.setLeftButton(text);
         }
+    }
+
+    public void hideLeftButton() {
+        if (mToolbar != null)
+            mToolbar.showLeftButton(false);
     }
 
     /**
@@ -142,7 +158,7 @@ public abstract class CustomToolBarActivity extends BaseActivity implements View
     }
 
     /* title按钮的点击事件处理 */
-    protected void titleAction(){
+    protected void titleAction() {
 
     }
 

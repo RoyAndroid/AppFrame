@@ -14,12 +14,12 @@ import com.appframe.R;
  * Created by Roy
  * Date: 16/3/10
  */
-public class ToolbarHelper {
+public class ToolbarHelper<T> {
     private Context mContext;
 
     FrameLayout mContentView;
 
-    Toolbar mToolbar;
+    android.support.v7.widget.Toolbar mToolbar;
 
     View mUserView;
 
@@ -29,11 +29,10 @@ public class ToolbarHelper {
 
     public ToolbarHelper(Context context, int layoutResId) {
         this.mContext = context;
-        mToolbarHeight = mContext.getResources().getDimensionPixelSize(R.dimen.dp_44);
+        mToolbarHeight = mContext.getResources().getDimensionPixelSize(R.dimen.dp_50);
         buildContentView();
         createUserView(layoutResId);
         addTitleBottomLine();
-        createToolbar();
     }
 
     private void buildContentView() {
@@ -44,8 +43,15 @@ public class ToolbarHelper {
         mContentView.setLayoutParams(params);
     }
 
-    private void createToolbar() {
+    public void createBasebar() {
         mToolbar = new Toolbar(mContext);
+        FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT,
+                mToolbarHeight);
+        mContentView.addView(mToolbar, params);
+    }
+
+    public void createSearchbar() {
+        mToolbar = new SearchBar(mContext);
         FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT,
                 mToolbarHeight);
         mContentView.addView(mToolbar, params);
@@ -84,7 +90,7 @@ public class ToolbarHelper {
         return mContentView;
     }
 
-    public Toolbar getToolbar() {
+    public android.support.v7.widget.Toolbar getToolbar() {
         return mToolbar;
     }
 
@@ -106,3 +112,4 @@ public class ToolbarHelper {
     }
 
 }
+
